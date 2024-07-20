@@ -37,8 +37,230 @@ nav ul li a:hover {
 
 main {
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #main-content {
     margin-top: 1em;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+#search-form {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+#search-form input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#search-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #45a049;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: calc(16.666% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+.book-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-item h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.book-details-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 2em auto;
+}
+
+.book-image {
+    flex: 1;
+    margin-right: 2em;
+}
+
+.book-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-info {
+    flex: 2;
+}
+
+.book-info h2 {
+    margin-top: 0;
+}
+
+.book-info p {
+    margin: 0.5em 0;
+}
+
+.add-book-form {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.add-book-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-book-form label {
+    margin: 0.5em 0 0.2em;
+    font-weight: bold;
+}
+
+.add-book-form input[type="text"],
+.add-book-form textarea,
+.add-book-form input[type="file"] {
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-book-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.add-book-form button {
+    padding: 0.8em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-book-form button:hover {
+    background-color: #45a049;
+}
+
+.book-details-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.book-image {
+    flex: 1;
+    margin-right: 2em;
+}
+
+.book-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.book-info {
+    flex: 2;
+    text-align: left;
+}
+
+.book-info h2 {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.book-info p {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+}
+
+.add-book-form-container {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-book-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-book-form-container label {
+    margin: 0.5em 0 0.2em;
+    font-weight: bold;
+}
+
+.add-book-form-container input[type="text"],
+.add-book-form-container textarea,
+.add-book-form-container input[type="file"] {
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.add-book-form-container textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.add-book-form-container button {
+    padding: 0.8em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-book-form-container button:hover {
+    background-color: #45a049;
 }

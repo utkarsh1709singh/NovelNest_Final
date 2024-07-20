@@ -1,21 +1,29 @@
 <?php
-include 'db/db.php';
+// Connect to the database
+$conn = new mysqli('localhost', 'root', '', 'book_manager2');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $title = $conn->real_escape_string($_POST['title']);
-    $author = $conn->real_escape_string($_POST['author']);
-    $genre = $conn->real_escape_string($_POST['genre']);
-    $published_year = $conn->real_escape_string($_POST['published_year']);
-    $description = $conn->real_escape_string($_POST['description']);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-    $sql = "INSERT INTO books (title, author, genre, published_year, description)
-            VALUES ('$title', '$author', '$genre', '$published_year', '$description')";
+// Handle form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $description = $_POST['description'];
+    $image = $_FILES['image']['name'];
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New book added successfully!";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    // Move uploaded image to the server directory
+    move_uploaded_file($_FILES['image']['tmp_name'], 'assets/images/' . $image);
+
+    $stmt = $conn->prepare("INSERT INTO books (title, author, description, image) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $title, $author, $description, $image);
+    $stmt->execute();
+    $stmt->close();
+
+    header("Location: index.php");
+    exit;
 }
 ?>
 
@@ -34,30 +42,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="view-books.php">View Books</a></li>
-            <li><a href="add-book.php">Add Book</a></li>
         </ul>
     </nav>
     <main>
-        <form method="POST" action="add-book.php">
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required>
-            <br>
-            <label for="author">Author:</label>
-            <input type="text" id="author" name="author" required>
-            <br>
-            <label for="genre">Genre:</label>
-            <input type="text" id="genre" name="genre">
-            <br>
-            <label for="published_year">Published Year:</label>
-            <input type="text" id="published_year" name="published_year">
-            <br>
-            <label for="description">Description:</label>
-            <textarea id="description" name="description"></textarea>
-            <br>
-            <input type="submit" value="Add Book">
-        </form>
+        <section>
+            <div class="add-book-form-container">
+                <form action="add-book.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                    
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required>
+                    
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
+                    
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image" required>
+                    
+                    <button type="submit">Add Book</button>
+                </form>
+            </div>
+        </section>
     </main>
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
