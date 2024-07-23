@@ -37,9 +37,10 @@ $result = $stmt->get_result();
     </header>
     <nav>
         <ul>
-            <li><a href="index.php">Home</a></li>
+        <li><a href="index.php">Home</a></li>
             <li><a href="wishlist.php">Wishlist</a></li>
             <li><a href="mybooks.php">My Books</a></li>
+            <li><a href="profile.php" class="profile-button">Profile</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>

@@ -53,13 +53,13 @@ if (isset($_POST['add_to_wishlist'])) {
 <body>
     <header>
         <h1>Book Collection Manager</h1>
-        <a href="profile.php" class="profile-button">Profile</a>
     </header>
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="wishlist.php">Wishlist</a></li>
             <li><a href="mybooks.php">My Books</a></li>
+            <li><a href="profile.php" class="profile-button">Profile</a></li>
             <li><a href="logout.php">Logout</a></li>
 
         </ul>

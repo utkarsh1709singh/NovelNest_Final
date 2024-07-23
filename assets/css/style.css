@@ -1,37 +1,49 @@
+/* Import the Playwright France Moderne font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #e0f7fa; /* Pastel sky blue background */
+    background-image: url('stars.png'); /* Correct path to stars.png */
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 300px;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #b2dfdb; /* Pastel sage green */
+    color: #4b0082; /* Indigo */
     padding: 1em;
     text-align: center;
     position: relative;
+    font-size: 2em;
 }
 
-header.profile-button {
+header .profile-button {
     position: absolute;
     top: 50%;
     right: 1em;
     transform: translateY(-50%);
     background-color: #fff;
-    color: #4CAF50;
+    color: #4b0082; /* Indigo */
     padding: 0.5em 1em;
-    border: 2px solid #4CAF50;
+    border: 2px solid #4b0082; /* Indigo */
     border-radius: 4px;
     text-decoration: none;
 }
 
-header.profile-button:hover {
-    background-color: #4CAF50;
+header .profile-button:hover {
+    background-color: #4b0082; /* Indigo */
     color: #fff;
 }
 
 nav ul {
-    background-color: #333;
+    background-color: #b2dfdb; /* Pastel sage green */
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -48,10 +60,11 @@ nav ul li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 1.5em;
 }
 
 nav ul li a:hover {
-    background-color: #111;
+    background-color: #9abfb9; /* Darker pastel sage green */
 }
 
 main {
@@ -80,19 +93,23 @@ main {
     padding: 10px;
     font-size: 16px;
     margin-right: 10px;
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border-radius: 10px;
+    background-color: #e0f7fa; /* Pastel sky blue */
 }
 
 #search-form button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #b2dfdb; /* Pastel sage green */
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 #search-form button:hover {
-    background-color: #45a049;
+    background-color: #9abfb9; /* Darker pastel sage green */
 }
 
 .book-list {
@@ -102,110 +119,45 @@ main {
 }
 
 .book-item {
-    border: 1px solid #ddd;
+    border: 2px solid #b2dfdb; /* Pastel sage green */
     padding: 10px;
     margin: 10px;
     width: calc(16.666% - 20px);
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.book-item:hover {
+    transform: scale(1.05);
 }
 
 .book-item img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 .book-item h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 10px 0;
+    color: #4b0082; /* Indigo */
+    text-align: center;
+    display: inline-block;
 }
 
 .book-details-container {
     display: flex;
     align-items: flex-start;
-    max-width: 1200px;
-    margin: 2em auto;
-}
-
-.book-image {
-    flex: 1;
-    margin-right: 2em;
-}
-
-.book-image img {
-    max-width: 100%;
-    height: auto;
-}
-
-.book-info {
-    flex: 2;
-}
-
-.book-info h2 {
-    margin-top: 0;
-}
-
-.book-info p {
-    margin: 0.5em 0;
-}
-
-.add-book-form {
-    max-width: 600px;
-    margin: 2em auto;
-    padding: 2em;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.add-book-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.add-book-form label {
-    margin: 0.5em 0 0.2em;
-    font-weight: bold;
-}
-
-.add-book-form input[type="text"],
-.add-book-form textarea,
-.add-book-form input[type="file"] {
-    padding: 0.8em;
-    margin-bottom: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.add-book-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.add-book-form button {
-    padding: 0.8em;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.add-book-form button:hover {
-    background-color: #45a049;
-}
-
-.book-details-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
     max-width: 1200px;
     margin: 2em auto;
     padding: 1em;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border-radius: 10px;
+    background-color: #e0f7fa; /* Pastel sky blue */
 }
 
 .book-image {
@@ -228,6 +180,7 @@ main {
 .book-info h2 {
     margin-top: 0;
     font-size: 2em;
+    color: #4b0082; /* Indigo */
 }
 
 .book-info p {
@@ -235,14 +188,65 @@ main {
     font-size: 1.2em;
 }
 
+.add-book-form {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border-radius: 10px;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-book-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-book-form label {
+    margin: 0.5em 0 0.2em;
+    font-weight: bold;
+    color: #4b0082; /* Indigo */
+}
+
+.add-book-form input[type="text"],
+.add-book-form textarea,
+.add-book-form input[type="file"] {
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border-radius: 10px;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    font-size: 1em;
+}
+
+.add-book-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.add-book-form button {
+    padding: 0.8em;
+    background-color: #b2dfdb; /* Pastel sage green */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.add-book-form button:hover {
+    background-color: #9abfb9; /* Darker pastel sage green */
+}
+
 .add-book-form-container {
     max-width: 600px;
     margin: 2em auto;
     padding: 2em;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border-radius: 10px;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .add-book-form-container form {
@@ -253,6 +257,7 @@ main {
 .add-book-form-container label {
     margin: 0.5em 0 0.2em;
     font-weight: bold;
+    color: #4b0082; /* Indigo */
 }
 
 .add-book-form-container input[type="text"],
@@ -260,9 +265,10 @@ main {
 .add-book-form-container input[type="file"] {
     padding: 0.8em;
     margin-bottom: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border-radius: 10px;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    font-size: 1em;
 }
 
 .add-book-form-container textarea {
@@ -272,47 +278,24 @@ main {
 
 .add-book-form-container button {
     padding: 0.8em;
-    background-color: #4CAF50;
+    background-color: #b2dfdb; /* Pastel sage green */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .add-book-form-container button:hover {
-    background-color: #45a049;
+    background-color: #9abfb9; /* Darker pastel sage green */
 }
-
-
-/* Profile Button */
-
-header .profile-button {
-    position: absolute;
-    top: 50%;
-    right: 1em;
-    transform: translateY(-50%);
-    background-color: #fff;
-    color: #4CAF50;
-    padding: 0.5em 1em;
-    border: 2px solid #4CAF50;
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-header .profile-button:hover {
-    background-color: #4CAF50;
-    color: #fff;
-}
-
 
 /* Floating Add Book Button */
-
 .floating-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #4CAF50;
+    background-color: #b2dfdb; /* Pastel sage green */
     color: white;
     border: none;
     border-radius: 50%;
@@ -327,39 +310,12 @@ header .profile-button:hover {
 }
 
 .floating-button:hover {
-    background-color: #45a049;
+    background-color: #9abfb9; /* Darker pastel sage green */
 }
-
-.floating-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 60px;
-    font-size: 24px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-}
-
-.floating-button:hover {
-    background-color: #45a049;
-}
-
-
-/* Wishlist Button */
-
-
-/* Add this to your assets/css/style.css */
 
 .button-group {
     display: flex;
-    gap: 10px;
-    /* Adjust spacing between buttons as needed */
+    gap: 10px; /* Adjust spacing between buttons as needed */
 }
 
 .wishlist-button,
@@ -370,15 +326,15 @@ header .profile-button:hover {
 }
 
 .wishlist-button {
-    background-color: #007BFF;
+    background-color: #b2dfdb; /* Pastel sage green */
     color: #FFF;
     border: none;
     border-radius: 5px;
 }
 
 .my-books-button {
-    background-color: #28A745;
-    color: #FFF;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    color: #4b0082; /* Indigo */
     border: none;
     border-radius: 5px;
 }

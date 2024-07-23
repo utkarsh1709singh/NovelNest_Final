@@ -1,14 +1,26 @@
+/* Import the Bellefair font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #e0f7fa; /* Pastel sky blue background */
+    background-image: url('stars.png'); /* Correct path to stars.png */
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 300px;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #b2dfdb; /* Pastel sage green */
+    color: #4b0082; /* Indigo */
     padding: 1em;
     text-align: center;
+    font-size: 2em;
 }
 
 main {
@@ -22,16 +34,17 @@ form {
     max-width: 400px;
     width: 100%;
     padding: 2em;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border-radius: 10px;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form label {
     display: block;
     margin-bottom: 0.5em;
     font-weight: bold;
+    color: #4b0082; /* Indigo */
 }
 
 form input[type="text"],
@@ -40,24 +53,25 @@ form input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border-radius: 10px;
+    background-color: #f0f8ff; /* Pastel blue */
     font-size: 16px;
 }
 
 form button {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #b2dfdb; /* Pastel sage green */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: #9abfb9; /* Darker pastel sage green */
 }
 
 form p {
@@ -66,6 +80,6 @@ form p {
 }
 
 form p a {
-    color: #4CAF50;
+    color: #4b0082; /* Indigo */
     text-decoration: none;
 }
