@@ -1,10 +1,18 @@
 <?php
+session_start();
+
 // Connect to the database
 $conn = new mysqli('localhost', 'root', '', 'book_manager2');
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if user is logged in
+if (!isset($_SESSION['session_token'])) {
+    header("Location: login.php");
+    exit;
 }
 
 // Fetch books based on search query
@@ -20,8 +28,20 @@ if (isset($_GET['search'])) {
 
 $stmt->execute();
 $result = $stmt->get_result();
-?>
+if (isset($_POST['add_to_wishlist'])) {
+    $book_id = intval($_POST['book_id']);
+    $user_id = $_SESSION['user_id'];
 
+    $stmt = $conn->prepare("INSERT INTO wishlist (user_id, book_id) VALUES (?, ?)");
+    $stmt->bind_param("ii", $user_id, $book_id);
+    $stmt->execute();
+    $stmt->close();
+
+    // Redirect to prevent form resubmission
+    header("Location: index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,11 +53,15 @@ $result = $stmt->get_result();
 <body>
     <header>
         <h1>Book Collection Manager</h1>
+        <a href="profile.php" class="profile-button">Profile</a>
     </header>
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="add-book.php">Add Book</a></li>
+            <li><a href="wishlist.php">Wishlist</a></li>
+            <li><a href="mybooks.php">My Books</a></li>
+            <li><a href="logout.php">Logout</a></li>
+
         </ul>
     </nav>
     <main>
@@ -59,6 +83,7 @@ $result = $stmt->get_result();
             </div>
         </section>
     </main>
+    <a href="add-book.php" class="floating-button">+</a>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

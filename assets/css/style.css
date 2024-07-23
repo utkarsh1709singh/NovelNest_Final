@@ -9,6 +9,25 @@ header {
     color: white;
     padding: 1em;
     text-align: center;
+    position: relative;
+}
+
+header.profile-button {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 0.5em 1em;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+header.profile-button:hover {
+    background-color: #4CAF50;
+    color: #fff;
 }
 
 nav ul {
@@ -263,4 +282,108 @@ main {
 
 .add-book-form-container button:hover {
     background-color: #45a049;
+}
+
+
+/* Profile Button */
+
+header .profile-button {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 0.5em 1em;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+header .profile-button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+
+/* Floating Add Book Button */
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.floating-button:hover {
+    background-color: #45a049;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.floating-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Wishlist Button */
+
+
+/* Add this to your assets/css/style.css */
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    /* Adjust spacing between buttons as needed */
+}
+
+.wishlist-button,
+.my-books-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wishlist-button {
+    background-color: #007BFF;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.my-books-button {
+    background-color: #28A745;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.wishlist-button:hover,
+.my-books-button:hover {
+    opacity: 0.8;
 }
