@@ -17,7 +17,7 @@ if (!isset($_SESSION['session_token'])) {
 
 // Fetch user's books
 $user_id = $_SESSION['user_id']; // Assuming user ID is stored in session
-$stmt = $conn->prepare("SELECT b.* FROM books b JOIN mybooks mb ON b.id = mb.book_id WHERE mb.user_id = ?");
+$stmt = $conn->prepare("SELECT DISTINCT b.* FROM books b JOIN mybooks mb ON b.id = mb.book_id WHERE mb.user_id = ?");
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
