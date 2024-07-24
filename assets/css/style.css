@@ -1,4 +1,4 @@
-/* Import the Playwright France Moderne font from Google Fonts */
+/* Import the Cormorant font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
 
 body {
@@ -122,21 +122,18 @@ main {
     border: 2px solid #b2dfdb; /* Pastel sage green */
     padding: 10px;
     margin: 10px;
-    width: calc(16.666% - 20px);
+    width: 200px; /* Set a fixed width for consistency */
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
     background-color: #e0f7fa; /* Pastel sky blue */
     border-radius: 10px;
     transition: transform 0.2s;
-}
-
-.book-item:hover {
-    transform: scale(1.05);
+    overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 .book-item img {
-    max-width: 100%;
+    width: 100%; /* Ensure image takes up the full width of the container */
     height: auto;
     border-radius: 10px;
 }
@@ -147,12 +144,15 @@ main {
     color: #4b0082; /* Indigo */
     text-align: center;
     display: inline-block;
+    overflow: hidden; /* Prevent text overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
 
 .book-details-container {
     display: flex;
     align-items: flex-start;
-    max-width: 1200px;
+    max-width: 800px; /* Adjust as needed */
     margin: 2em auto;
     padding: 1em;
     border: 2px solid #b2dfdb; /* Pastel sage green */
@@ -160,9 +160,14 @@ main {
     background-color: #e0f7fa; /* Pastel sky blue */
 }
 
-.book-image {
-    flex: 1;
+.book-details-container .book-image {
+    flex: 1 1 auto;
     margin-right: 2em;
+}
+
+.book-details-container .book-info {
+    flex: 2 1 auto;
+    text-align: left;
 }
 
 .book-image img {
@@ -170,11 +175,6 @@ main {
     height: auto;
     border-radius: 8px;
     border: 1px solid #ddd;
-}
-
-.book-info {
-    flex: 2;
-    text-align: left;
 }
 
 .book-info h2 {
@@ -318,8 +318,15 @@ main {
     gap: 10px; /* Adjust spacing between buttons as needed */
 }
 
-.wishlist-button,
+.wishlist-button{
+    font-family: 'Cormorant', serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .my-books-button {
+    font-family: 'Cormorant', serif;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -327,18 +334,30 @@ main {
 
 .wishlist-button {
     background-color: #b2dfdb; /* Pastel sage green */
-    color: #FFF;
+    color: #4b0082;
     border: none;
     border-radius: 5px;
 }
 
 .my-books-button {
-    background-color: #e0f7fa; /* Pastel sky blue */
+    background-color: #b2dfdb; /* Pastel sky blue */
     color: #4b0082; /* Indigo */
     border: none;
     border-radius: 5px;
 }
+.remove-button {
+    font-family: 'Cormorant', serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #b2dfdb; /* Pastel sage green */
+    color: #4b0082;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
+.remove-button:hover,
 .wishlist-button:hover,
 .my-books-button:hover {
     opacity: 0.8;
