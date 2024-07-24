@@ -81,10 +81,18 @@ main {
     text-align: center;
 }
 
+#search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #search-form {
     margin-bottom: 1em;
     display: flex;
     justify-content: center;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the search form */
 }
 
 #search-form input[type="text"] {
@@ -143,10 +151,11 @@ main {
     margin: 10px 0;
     color: #4b0082; /* Indigo */
     text-align: center;
-    display: inline-block;
+    display: block;
     overflow: hidden; /* Prevent text overflow */
-    white-space: nowrap; /* Prevent text from wrapping */
     text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words */
 }
 
 .book-details-container {
@@ -345,6 +354,7 @@ main {
     border: none;
     border-radius: 5px;
 }
+
 .remove-button {
     font-family: 'Cormorant', serif;
     padding: 10px 20px;
@@ -420,9 +430,10 @@ form textarea {
 }
 
 form button {
+    font-family: 'Cormorant', serif;
     padding: 10px 20px;
     background-color: #b2dfdb; /* Pastel sage green */
-    color: white;
+    color: #4b0082;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -430,5 +441,25 @@ form button {
 }
 
 form button:hover {
+    background-color: #9abfb9; /* Darker pastel sage green */
+}
+
+.remove-comment-form {
+    margin-top: 10px;
+}
+
+.remove-button {
+    font-family: 'Cormorant', serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #b2dfdb; /* Pastel sage green */
+    color: #4b0082;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.remove-button:hover {
     background-color: #9abfb9; /* Darker pastel sage green */
 }

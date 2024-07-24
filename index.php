@@ -62,16 +62,15 @@ if (isset($_POST['add_to_wishlist'])) {
             <li><a href="community.php">Community</a></li>
             <li><a href="profile.php" class="profile-button">Profile</a></li>
             <li><a href="logout.php">Logout</a></li>
-
         </ul>
     </nav>
     <main>
-        <section id="main-content">
-            <!-- Search Form -->
-            <form action="index.php" method="get" id="search-form">
+        <div id="search-container">
+            <form id="search-form" action="index.php" method="get">
                 <input type="text" name="search" placeholder="Search books..." value="<?php echo htmlspecialchars($search_query); ?>">
                 <button type="submit">Search</button>
             </form>
+        </div>
             
             <!-- Book List -->
             <div class="book-list">
