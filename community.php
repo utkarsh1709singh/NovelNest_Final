@@ -39,11 +39,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+// Handle search query
+$search_query = '';
+if (isset($_GET['query'])) {
+    $search_query = $_GET['query'];
+}
+
 // Fetch books with comments
 $sql = "SELECT b.*, c.comment, c.created_at, c.id as comment_id, u.username
         FROM books b
         LEFT JOIN comments c ON b.id = c.book_id
         LEFT JOIN users u ON c.user_id = u.id
+        WHERE b.title LIKE '%$search_query%' OR b.author LIKE '%$search_query%'
         ORDER BY c.created_at DESC";
 $result = $conn->query($sql);
 
@@ -92,6 +99,12 @@ $conn->close();
         </ul>
     </nav>
     <main>
+        <div id="search-container">
+            <form id="search-form" action="community.php" method="get">
+                <input type="text" name="query" placeholder="Search books..." value="<?php echo htmlspecialchars($search_query); ?>">
+                <button type="submit">Search</button>
+            </form>
+        </div>
         <div class="comments-container">
             <?php if (!empty($books)) : ?>
                 <?php foreach ($books as $book_id => $book) : ?>
@@ -101,7 +114,7 @@ $conn->close();
                         </div>
                         <div class="book-info">
                             <h2><?php echo htmlspecialchars($book['details']['title']); ?></h2>
-                            <p><strong>Author:</strong> <?php echo htmlspecialchars($book['details']['author']); ?></p>
+                            <p><strong>Author: <?php echo htmlspecialchars($book['details']['author']); ?></strong></p>
                             <?php if (isset($book['comments'])) : ?>
                                 <?php foreach ($book['comments'] as $comment) : ?>
                                     <div class="comment-box">
