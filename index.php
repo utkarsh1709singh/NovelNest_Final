@@ -52,7 +52,7 @@ if (isset($_POST['add_to_wishlist'])) {
 </head>
 <body>
     <header>
-        <h1>Book Collection Manager</h1>
+        <h1>Novel Nest</h1>
     </header>
     <nav>
         <ul>

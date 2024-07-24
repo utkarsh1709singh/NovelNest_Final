@@ -122,10 +122,10 @@ $conn->close();
                                         <p><?php echo htmlspecialchars($comment['comment']); ?></p>
                                         <small>Posted on: <?php echo htmlspecialchars($comment['created_at']); ?></small>
                 
-                                        <form class="remove-comment-form" method="post" action="community.php">
+                                        <form class="remn" type="submit">Remove</button>
+                                        </form>ove-comment-form" method="post" action="community.php">
                                             <input type="hidden" name="remove_comment_id" value="<?php echo $comment['comment_id']; ?>">
-                                            <button class="remove-button" type="submit">Remove</button>
-                                        </form>
+                                            <button class="remove-butto
                                     </div>
                                 <?php endforeach; ?>
                             <?php else : ?>

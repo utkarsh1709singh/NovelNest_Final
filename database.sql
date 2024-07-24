@@ -36,7 +36,7 @@ CREATE TABLE mybooks (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     user_id INT(11) NOT NULL,
     book_id INT(11) NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id), -- Assuming you have a users table
+    FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (book_id) REFERENCES books(id)
 );
 

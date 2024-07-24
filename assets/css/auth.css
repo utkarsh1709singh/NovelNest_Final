@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: #4b0082; /* Indigo */
     padding: 1em;
     text-align: center;
@@ -33,7 +33,7 @@ form {
     max-width: 400px;
     width: 100%;
     padding: 2em;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #e0f7fa; /* Pastel sky blue */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,7 +52,7 @@ form input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 1em;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #f0f8ff; /* Pastel blue */
     font-size: 16px;
@@ -61,7 +61,7 @@ form input[type="email"] {
 form button {
     width: 100%;
     padding: 10px;
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: white;
     border: none;
     border-radius: 10px;
@@ -70,7 +70,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #9abfb9; /* Darker pastel sage green */
+    background-color: #8fb3a1; /* Slightly darker pastel sage green hover */
 }
 
 form p {

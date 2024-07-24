@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <header>
-        <h1>Login</h1>
+        <h1>Novel Nest</h1>
     </header>
     <main>
         <form action="login.php" method="post">

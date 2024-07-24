@@ -1,3 +1,4 @@
+/* Import the Bellefair font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
 
 body {
@@ -15,7 +16,7 @@ body {
 }
 
 header {
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7;; /* Slightly darker pastel sage green */
     color: #4b0082; /* Indigo */
     padding: 1em;
     text-align: center;
@@ -23,7 +24,7 @@ header {
 }
 
 nav ul {
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -44,7 +45,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #9abfb9; /* Darker pastel sage green */
+    background-color: #8fb3a1; /* Slightly darker pastel sage green hover */
 }
 
 main {
@@ -58,7 +59,7 @@ main {
     max-width: 400px;
     width: 100%;
     padding: 2em;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #e0f7fa; /* Pastel sky blue */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

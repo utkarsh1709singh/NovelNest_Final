@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: #4b0082; /* Indigo */
     padding: 1em;
     text-align: center;
@@ -46,7 +46,7 @@ a {
 }
 
 nav ul {
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -76,7 +76,7 @@ nav ul li a, nav ul li a:visited {
 }
 
 nav ul li a:hover {
-    background-color: #9abfb9; /* Darker pastel sage green */
+    background-color: #8fb3a1; /* Slightly darker pastel sage green hover */
 }
 
 main {
@@ -113,7 +113,7 @@ main {
     padding: 10px;
     font-size: 16px;
     margin-right: 10px;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #e0f7fa; /* Pastel sky blue */
 }
@@ -121,7 +121,7 @@ main {
 #search-form button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: white;
     border: none;
     cursor: pointer;
@@ -129,7 +129,7 @@ main {
 }
 
 #search-form button:hover {
-    background-color: #9abfb9; /* Darker pastel sage green */
+    background-color: #8fb3a1; /* Slightly darker pastel sage green hover */
 }
 
 .book-list {
@@ -139,7 +139,7 @@ main {
 }
 
 .book-item {
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     padding: 10px;
     margin: 10px;
     width: 200px; /* Set a fixed width for consistency */
@@ -176,7 +176,7 @@ main {
     max-width: 800px; /* Adjust as needed */
     margin: 2em auto;
     padding: 1em;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #e0f7fa; /* Pastel sky blue */
 }
@@ -217,7 +217,7 @@ main {
     max-width: 600px;
     margin: 2em auto;
     padding: 2em;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #e0f7fa; /* Pastel sky blue */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -239,7 +239,7 @@ main {
 .add-book-form input[type="file"] {
     padding: 0.8em;
     margin-bottom: 1em;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #e0f7fa; /* Pastel sky blue */
     font-size: 1em;
@@ -252,7 +252,7 @@ main {
 
 .add-book-form button {
     padding: 0.8em;
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: #4b0082;
     border: none;
     border-radius: 10px;
@@ -261,14 +261,14 @@ main {
 }
 
 .add-book-form button:hover {
-    background-color: #9abfb9; /* Darker pastel sage green */
+    background-color: #8fb3a1; /* Slightly darker pastel sage green hover */
 }
 
 .add-book-form-container {
     max-width: 600px;
     margin: 2em auto;
     padding: 2em;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #e0f7fa; /* Pastel sky blue */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -290,7 +290,7 @@ main {
 .add-book-form-container input[type="file"] {
     padding: 0.8em;
     margin-bottom: 1em;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #e0f7fa; /* Pastel sky blue */
     font-size: 1em;
@@ -303,7 +303,7 @@ main {
 
 .add-book-form-container button {
     padding: 0.8em;
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: #4b0082;
     border: none;
     border-radius: 10px;
@@ -312,7 +312,7 @@ main {
 }
 
 .add-book-form-container button:hover {
-    background-color: #9abfb9; /* Darker pastel sage green */
+    background-color: #8fb3a1; /* Slightly darker pastel sage green hover */
 }
 
 /* Floating Add Book Button */
@@ -320,7 +320,7 @@ main {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: white;
     border: none;
     border-radius: 50%;
@@ -335,7 +335,7 @@ main {
 }
 
 .floating-button:hover {
-    background-color: #9abfb9; /* Darker pastel sage green */
+    background-color: #8fb3a1; /* Slightly darker pastel sage green hover */
 }
 
 .button-group {
@@ -358,14 +358,14 @@ main {
 }
 
 .wishlist-button {
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: #4b0082;
     border: none;
     border-radius: 5px;
 }
 
 .my-books-button {
-    background-color: #b2dfdb; /* Pastel sky blue */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: #4b0082; /* Indigo */
     border: none;
     border-radius: 5px;
@@ -376,7 +376,7 @@ main {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: #4b0082;
     border: none;
     border-radius: 5px;
@@ -390,17 +390,17 @@ main {
 }
 
 .comments-container {
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     padding: 20px;
     margin: 20px;
-    background-color: #b2dfdb; /* Pastel sky blue */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     max-width: 1000px; /* Increase the max-width */
     margin: 2em auto;
 }
 
 .comment-box {
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     padding: 10px;
     margin: 10px 0;
     background-color: #e0f7fa; /* Pastel sky blue */
@@ -439,7 +439,7 @@ form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border: 2px solid #a3cbb7; /* Slightly darker pastel sage green */
     border-radius: 10px;
     background-color: #e0f7fa; /* Pastel sky blue */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
@@ -448,7 +448,7 @@ form textarea {
 form button {
     font-family: 'Cormorant', serif;
     padding: 10px 20px;
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: #4b0082;
     border: none;
     border-radius: 10px;
@@ -457,7 +457,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #9abfb9; /* Darker pastel sage green */
+    background-color: #8fb3a1; /* Slightly darker pastel sage green hover */
 }
 
 .remove-comment-form {
@@ -469,7 +469,7 @@ form button:hover {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #b2dfdb; /* Pastel sage green */
+    background-color: #a3cbb7; /* Slightly darker pastel sage green */
     color: #4b0082;
     border: none;
     border-radius: 5px;
@@ -477,5 +477,5 @@ form button:hover {
 }
 
 .remove-button:hover {
-    background-color: #9abfb9; /* Darker pastel sage green */
+    background-color: #8fb3a1; /* Slightly darker pastel sage green hover */
 }
