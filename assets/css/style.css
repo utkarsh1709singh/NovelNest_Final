@@ -362,3 +362,73 @@ main {
 .my-books-button:hover {
     opacity: 0.8;
 }
+
+.comments-container {
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    padding: 20px;
+    margin: 20px;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    border-radius: 10px;
+    max-width: 1000px; /* Increase the max-width */
+    margin: 2em auto;
+}
+
+.comment-box {
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    border-radius: 10px;
+}
+
+.comment-box h4 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #4b0082; /* Indigo */
+}
+
+.comment-box p {
+    margin: 5px 0;
+}
+
+.comment-box small {
+    display: block;
+    margin-top: 10px;
+    color: #666;
+}
+
+form {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 800px; /* Adjust max-width to fit within the larger container */
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #b2dfdb; /* Pastel sage green */
+    border-radius: 10px;
+    background-color: #e0f7fa; /* Pastel sky blue */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #b2dfdb; /* Pastel sage green */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #9abfb9; /* Darker pastel sage green */
+}
